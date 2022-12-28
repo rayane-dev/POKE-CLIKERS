@@ -1,0 +1,172 @@
+*, ::before ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F6F8FC;
+    color: #333;
+    background-image: url('./image/pokeball-icon.png');
+    background-repeat: no-repeat;
+   /*background-position-x: -200px;
+    background-position-y: -100px;*/
+    background-position: -100px 200px;
+}
+
+ul{
+    list-style: none;
+}
+
+h1{
+    text-align: center;
+    padding: 25px 0px;
+    color: #333;
+}
+
+.recherche-poke{
+    max-width: 700px;
+    width: 70%;
+    min-width: 450px;
+    margin: 30px auto;
+    position: relative;
+    display: flex;
+}
+
+.inp-group{
+    width: 100%;
+}
+
+.recherche-poke input{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border: 3px;
+    font-size: 18px;
+}
+
+.recherche-poke label{
+    position: absolute;
+    color: #333;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 8px;
+    transition: all .3s ease-in;
+}
+
+.recherche-poke button{
+    margin-left: 5px;
+    padding: 15px;
+}
+
+/*Animation Input*/
+
+.recherche-poke:focus-within label,
+.recherche-poke.active-input label{
+    top: -15px;
+    padding-left: 5px;
+}
+
+
+/* Liste des cartes */
+
+.container{
+    width: 70%;
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.liste-poke li{
+    width: 190px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+    box-shadow: #ededed 0 10px 10px;
+    transition-duration: 100ms;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.liste-poke li:hover{
+    outline: 3px solid #e0e0e0;
+    transform: translateY(-5px);
+}
+
+.liste-poke li img{
+    transition-duration: 700ms;
+    image-rendering: pixelated;
+}
+
+.liste-poke li:hover img{
+    transform: translateY(-60px);
+    /*transform: scale(2);*/
+}
+
+.liste-poke li:hover img{
+    transform: translateY(-60px);
+}
+
+.liste-poke h5{
+    font-size: 19px;
+}
+
+.liste-poke p{
+    font-size: 18px;
+}
+
+/*LOADER*/
+.loader{
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.point{
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #333;
+    animation: mont .3s alternate infinite;
+}
+
+.point:nth-child(1){
+    animation-delay: 0.1s;
+}
+
+.point:nth-child(2){
+    animation-delay: 0.2s;
+}
+
+.point:nth-child(3){
+    animation-delay: 0.3s;
+}
+
+@keyframes mont {
+    100%{
+        transform: translateY(-30px);
+    }
+
+}
