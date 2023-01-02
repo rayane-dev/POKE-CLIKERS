@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke Clicker | Jeu</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html"><img src="./image/Game Title.png" alt="" id="title-game"></a>
+        <div id="container-score">
+            <p id="balance-ctn"><span id="balance">0 </span>baies</p>
+            <p id="pps-ctn"><span id="pps"></span>baies par seconde</p>
+            <ul id="upgradeList"></ul>
+            <ul id="successList"></ul>
+        </div>
+        <img src="./image/starter/salameche.png" alt="" id="salameche">
+        <img src="./image/starter/dracolosse.png" alt="" id="dracolosse">
+        <img src="./image/starter/mewtwo-flying.png" alt="" id="mewtwo">
+        <nav>
+            <button id="btn-amelioration"><img src="./image/nav/Améliorations.png" alt=""></button>
+            <button id="btn-succes"><img src="./image/nav/Succès.png" alt=""></button>
+            <a href="./Leaderboard.html" target="_blank"><img src="./image/nav/Classement.png" alt=""></a>
+            <button id="btn-parametre"><img src="./image/nav/Paramètres.png" alt=""></button>
+        </nav>
+        <div id="container-baie">
+            <img id="clickButton" src="./image/baie1.png" alt="" srcset="">
+        </div>
+
+        <div id="notification-ctn">
+            <!-- <div class="upgrade-notification">
+                <div>
+                    <img class="upgrade-notification-image" src="image/amelioration1.png" alt="">
+                </div>
+                <div class="upgrade-notification-text-ctn">
+                    <p class="upgrade-notification-text">oienvpireov rnepivrnepivunrepu vnperuvnpeoienvp ireovrnepivrnepivunrepuvn peruvnpe</p>
+                </div>
+                <div>
+                    <button class="btn-croix-notification"><img src="./image/icons8-multiplier-64.png" alt="" srcset=""></button>
+                </div>
+            </div> -->
+        </div>
+
+        <!--Modal container AMELIORATION -->
+        
+
+        <div id="modal-container-amelioration">
+            <div id="header-modal-amelioration">
+                <img src="./image/amelioration Title.png" alt="" class="title-modal">
+            </div>
+            <button class="btn-croix1"><img src="./image/icons8-multiplier-64.png" alt="" srcset=""></button>
+        </div>
+
+        
+
+
+        <!--Modal container succes-->
+
+        <div id="modal-container-succes">
+            <div id="header-modal-succes">
+                <img src="./image/succes title.png" alt="" class="title-modal">
+            </div>
+            <button class="btn-croix2"><img src="./image/icons8-multiplier-64.png" alt="" srcset=""></button>
+        </div>
+
+        <!--Modal container parametre -->
+
+        <div id="modal-container-parametre">
+            <div id="header-modal-parametre">
+                <img src="./image/params title.png" alt="" class="title-modal">
+            </div>
+            
+            <button class="btn-croix3"><img src="./image/icons8-multiplier-64.png" alt="" srcset=""></button>
+
+            <div class="contain">
+                <div class="left">
+                    <div id="theme">
+                        <h3 id="section-title-theme">Thème :</h3>
+                    </div>
+                    <div id="pokemon">
+                        <h3 id="section-title-baie">Apparence de la baie :</h3>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <h3>Statistiques :</h3>
+                        <p>Nombre de baies récoltées au total (Score total) : <span id="nb-baies">0</span></p>
+                        <p>Nombre de clicks au total : <span id="nb-clicks">0</span></p>
+                        <p>Nombre de baies récoltées automatiquement par seconde : <span id="nb-baies-sec">0</span></p>
+                        <p>Nombre de succès débloqués : <span id="nb-success">0</span></p>
+                    </div>
+                </div>
+            </div>
+           
+            
+
+
+        </div>
+
+
+    </div>
+    <script src="menus.js"></script>
+    <script src="clicker.js"></script>
+    <script src="upgrades.js"></script>
+    <script src="notifications.js"></script>
+</body>
+</html>
+

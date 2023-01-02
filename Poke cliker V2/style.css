@@ -1,0 +1,788 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #171717;
+    overflow-x: hidden;
+}
+
+img{
+    object-fit: cover;
+}
+
+.container{
+    display: flex;
+    max-width: 1300px;
+    overflow-x: hidden;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: rgba(8,34,78,.9);
+    background-color: #171717;
+    color: rgba(8,34,78,.9);
+}
+
+#game-logo{
+    height: 50px;
+}
+
+header .container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+header .container div:nth-of-type(1){
+    width: 100%;
+}
+
+header .container div:nth-of-type(1) img{
+    height: 40px;
+}
+
+header .container nav{
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+}
+
+header .container nav a {
+    color: rgba(8,34,78,.9);
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 100;
+}
+
+header .container #button-header-part{
+    display: flex;
+    justify-content: right;
+    width: 100%;
+}
+
+
+header .container #button-header-part a{
+    color: rgba(8,34,78,.9);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-size: 17px;
+    padding: 14px 27px;
+    border-radius: 5px;
+    background-color: rgba(8,34,78,.9);
+    background-color: #da4032;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    border: none;
+    z-index: 100;
+}
+
+header .container #burger{
+    height: 20px;
+    background: none;
+    border: none;
+    display: none;
+}
+
+header .container #menu-burger{
+    display: none;
+}
+
+/*MAIN PART*/
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+}
+
+main .container{
+    display: flex;
+    width: 100%;
+    height: 95vh;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    color: #fff;
+    padding-top: 50px;
+}
+
+main .container .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+main .container .left #text-left{
+    padding-bottom: 200px;
+}
+
+main .container .left h2{
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+main .container .left p{
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+main .container .left #text{
+    text-transform: none;
+    font-size: 17px;
+    margin-top: 15px;
+    width: 500px;
+    text-align: justify;
+}
+
+main .container .left button{
+    color: rgba(8,34,78,.9);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-size: 17px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: rgba(8,34,78,.9);
+    background-color: #da4032;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    border: none;
+    margin-top: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+
+main .container .left button i{
+    margin-left: 10px;
+    transition: .5s ease;
+}
+
+main .container .left button:hover i{
+    transform: translateX(10px);
+    
+}
+
+@keyframes dracaufeu{
+    50%{
+        transform: translateY(-70px);
+    }
+
+    to{
+        transform: translateY(0px);
+    }
+}
+
+
+main .container img{
+    padding-top: 0px;
+    height: 700px;
+    animation: dracaufeu 7s infinite;
+}
+
+/*NEW TRAINER*/
+#new-trainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    background-image: url('./image/background.webp');
+    background-image: cover;
+    background-repeat: no-repeat;
+    color: #000;
+}
+
+#new-trainer #new-trainer-item{
+    display: flex;
+    height: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#new-trainer #new-trainer-item #new-trainer-text{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#new-trainer #new-trainer-item #new-trainer-text h3{
+    font-size: 40px;
+}
+
+#new-trainer #new-trainer-item #new-trainer-text p{
+    font-size: 20px;
+}
+
+
+#new-trainer #new-trainer-item img:nth-of-type(1){
+    height: 200px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#new-trainer #new-trainer-item img:nth-of-type(2){
+    height: 150px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.item{
+    padding-left: 70px;
+}
+
+
+#poke-cliker-presentation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+#poke-cliker-presentation .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#poke-cliker-presentation .container h4{
+    font-size: 70px;
+    text-transform: uppercase;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#poke-cliker-presentation .container p{
+    width: 900px;
+    font-size: 20px;
+    text-justify: center;
+    margin-bottom: 80px;
+}
+
+#poke-cliker-presentation .container #button-header-part{
+    margin-bottom: 100px;
+}
+
+#poke-cliker-presentation .container #button-header-part a{
+    color: rgba(8,34,78,.9);
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-size: 17px;
+    padding: 14px 27px;
+    border-radius: 5px;
+    background-color: rgba(8,34,78,.9);
+    background-color: #da4032;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    border: none;
+   
+}
+
+#poke-cliker-presentation .container #card-ui-part{
+    display: flex;
+    margin-top: 100px;
+}
+
+#poke-cliker-presentation .container #card-ui-part .card-ui{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    height: 230px;
+    width: 300px;
+    background: linear-gradient(#27323A, #313036);
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#poke-cliker-presentation .container #card-ui-part .card-ui img{
+    height: 200px;
+    position: relative;
+    object-fit: contain;
+    position: relative;
+    transition: .4s ease;
+    top: -60px;
+    z-index: 20;
+}
+
+#poke-cliker-presentation .container #card-ui-part .card-ui:hover img{
+    transform: translateY(-30px);
+}
+
+#poke-cliker-presentation .container #card-ui-part .card-ui p:nth-of-type(1){
+    font-size: 30px;
+    
+}
+#poke-cliker-presentation .container #card-ui-part .card-ui .content{
+    display: flex;
+    width: 300px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    top: -100px;
+    z-index: 10;
+    transition: .6s ease;
+    opacity: 0;
+}
+
+#poke-cliker-presentation .container #card-ui-part .card-ui:hover .content{
+    transform: translateY(50px);
+    opacity: 1;
+}
+
+/*MAP*/
+#map{
+    margin-top: 150px;
+    background-image: url('./image/map.webp');
+    background-repeat: no-repeat;
+    background: cover;
+    height: 499px;
+}
+
+
+/*Evenemnent*/
+
+
+
+/*FOOTER*/
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    background-color: #191919;
+    color: #fff;
+    
+}
+
+footer .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 100%;
+}
+
+footer .container .list{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+
+}
+
+footer .container .list:nth-of-type(1){
+    width: 400px;
+}
+
+footer .container .list h4{
+    font-size: 23px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+footer .container .list p{
+    font-size: 20px;
+}
+
+footer .container .list a{
+    font-size: 20px;
+    padding-top: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .container .list a:hover{
+    transform: translateX(15px);
+    transition: .5s ease;
+}
+
+
+@media  screen and (min-width: 720px) and (max-width: 720px) {
+    header .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    header .container div:nth-of-type(1) img{
+        height: 20px;
+    }
+    #game-logo{
+        height: 25px;
+    }
+    header .container nav a{
+        font-size: 15px;
+    }
+    header .container #button-header-part a{
+        padding: 9px 19px;
+        font-size: 15px;
+    }
+    
+    /*MAIN*/
+    main .container{
+        padding-left: 100px;
+        padding-right: 100px;
+        
+    }
+    main .container .left #text-left {
+        padding-bottom: 150px;
+    }
+    main .container .left h2{
+        font-size: 30px;
+    }
+
+    main .container .left p{
+        font-size: 20px;
+    }
+    main .container .left #text{
+        font-size: 13px;
+        width: 350px;
+    }
+    main .container .left button {
+        font-size: 13px;
+        padding: 12px 15px;
+        margin-top: 30px;
+    }
+    main .container .left button i{
+        margin-left: 7px;
+    }
+    main .container img{
+        padding-top: 0px;
+        height: 300px;
+        animation: dracaufeu 7s infinite;
+    }
+    /*NEW-TRAINER*/
+
+    #new-trainer{
+        width: 100vw;
+        height: 200px;
+    }
+    #new-trainer #new-trainer-item #new-trainer-text{
+        width: 350px;
+    }
+    #new-trainer #new-trainer-item #new-trainer-text h3{
+        font-size: 27px;
+    }
+    
+    #new-trainer #new-trainer-item #new-trainer-text p{
+        font-size: 17px;
+    }
+
+    #new-trainer #new-trainer-item img:nth-of-type(1){
+        height: 60px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    #new-trainer #new-trainer-item img:nth-of-type(2){
+        height: 60px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .item {
+        padding-left: 30px;
+    }
+    /*CARD-UI*/
+    #poke-cliker-presentation .container #card-ui-part{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    #poke-cliker-presentation .container #button-header-part a{
+        font-size: 16px;
+        padding: 17px 15px;
+    } 
+    
+    /*POKE CLIKER PRESENTATION*/
+    #poke-cliker-presentation .container{
+        width: 100%;
+    }
+
+    #poke-cliker-presentation .container h4{
+        font-size: 24px;
+    }
+    #poke-cliker-presentation .container p{
+        font-size: 15px;
+        width: 70%;
+        margin-bottom: 100px;
+        text-justify: inter-word;
+    }
+
+    #poke-cliker-presentation .container #card-ui-part .card-ui{
+        height: 180px;
+        width: 270px;
+        margin-bottom: 100px;
+        font-size: 17px;
+    }
+
+    #poke-cliker-presentation .container #card-ui-part .card-ui img {
+        height: 170px;
+    }
+
+    #poke-cliker-presentation .container #card-ui-part .card-ui p {
+        font-size: 25px;
+    }
+    #poke-cliker-presentation .container #card-ui-part .card-ui .content{
+        width: 270px;
+    }
+    /*MAP*/
+    #map{
+        height: 250px;
+        margin-top: 0px;
+    }
+
+    /*Foooter*/
+    footer .container .list h4{
+        font-size: 19px;
+    }
+    footer .container .list p{
+        font-size: 10px;
+    }
+    footer .container .list a{
+        font-size: 13px;
+    }
+}
+
+@media  screen and (max-width: 576px) and (min-width:576px) {
+    .open{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    
+    /*HEADER*/
+    .container{
+        overflow-x: hidden;
+        width: 100vw;
+    }
+    header .container{
+        padding-left: 70px;
+        padding-right: 70px;
+        align-items: center;
+    }
+    header .container div:nth-of-type(1) img{
+        height: 20px;
+    }
+    #game-logo{
+        height: 25px;
+    }
+    header .container nav{
+        display: none;
+    }
+    header .container nav a{
+        font-size: 15px;
+    }
+    header .container #button-header-part{
+        display: none;
+    }
+    
+    header .container #burger{
+        display: block;
+        position: relative;
+        cursor: pointer;
+        z-index: 20;
+    }
+    header .container #menu-burger #croix{
+        font-size: 40px;
+        position: relative;
+        top: -100%;
+        left: 70%;
+
+    }
+
+    header .container #burger img{
+        height: 20px;
+    }
+
+    header .container #menu-burger{
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 100%;
+        width: 60vw;
+        height: 110vh;
+        color: #fff;
+        background-color: #da4032;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transition: 1s ease-in-out;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    
+    /*MAIN*/
+    main .container{
+        flex-direction: column-reverse;
+        padding-left: 100px;
+        padding-right: 100px;
+        height: 155vh;
+        overflow-y: hidden;
+    }
+    main .container .left{
+        margin-top: 50px;
+    }
+    main .container .left #text-left {
+        padding-bottom: 150px;
+    }
+    main .container .left h2{
+        font-size: 30px;
+    }
+
+    main .container .left p{
+        font-size: 20px;
+    }
+    main .container .left #text{
+        font-size: 10px;
+        width: 300px;
+    }
+    main .container .left button {
+        font-size: 13px;
+        padding: 12px 15px;
+        margin-top: 30px;
+    }
+    main .container .left button i{
+        margin-left: 7px;
+    }
+    main .container img{
+        padding-top: 0px;
+        height: 250px;
+        animation: dracaufeu 5s infinite;
+    }
+    @keyframes dracaufeu{
+        50%{
+            transform: translateY(-40px);
+        }
+    
+        to{
+            transform: translateY(0px);
+        }
+    }
+    #new-trainer{
+        width: 100vw;
+        height: 200px;
+    }
+    #new-trainer #new-trainer-item #new-trainer-text{
+        width: 250px;
+    }
+    #new-trainer #new-trainer-item #new-trainer-text h3{
+        font-size: 25px;
+    }
+    
+    #new-trainer #new-trainer-item #new-trainer-text p{
+        font-size: 15px;
+    }
+
+    #new-trainer #new-trainer-item img:nth-of-type(1){
+        height: 50px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    #new-trainer #new-trainer-item img:nth-of-type(2){
+        height: 50px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .item {
+        padding-left: 30px;
+    }
+    /*CARD-UI*/
+    #poke-cliker-presentation .container #card-ui-part{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    #poke-cliker-presentation .container #button-header-part a{
+        font-size: 16px;
+        padding: 17px 15px;
+    } 
+    
+    /*POKE CLIKER PRESENTATION*/
+    #poke-cliker-presentation .container{
+        width: 100%;
+    }
+
+    #poke-cliker-presentation .container h4{
+        font-size: 24px;
+    }
+    #poke-cliker-presentation .container p{
+        font-size: 15px;
+        width: 70%;
+        margin-bottom: 100px;
+        text-justify: inter-word;
+    }
+
+    #poke-cliker-presentation .container #card-ui-part .card-ui{
+        height: 150px;
+        width: 230px;
+        margin-bottom: 100px;
+        font-size: 17px;
+    }
+
+    #poke-cliker-presentation .container #card-ui-part .card-ui img {
+        height: 150px;
+    }
+
+    #poke-cliker-presentation .container #card-ui-part .card-ui p {
+        font-size: 25px;
+    }
+    #poke-cliker-presentation .container #card-ui-part .card-ui .content{
+        width: 230px;
+
+    }
+
+    #poke-cliker-presentation .container #card-ui-part .card-ui p:nth-of-type(1) {
+        font-size: 23px;
+    }
+    /*MAP*/
+    #map{
+        height: 250px;
+        margin-top: 0px;
+    }
+    /*Foooter*/
+    footer{
+        height: 250px;
+    }
+    footer .container .list h4{
+        font-size: 12px;
+    }
+    footer .container .list p{
+        font-size: 9px;
+    }
+    footer .container .list a{
+        font-size: 8px;
+    }
+}
+
+.open #menu-burger{
+    display: block;
+    transform: translateX(-100%);
+    transition: 1s ease-in-out;
+}
+
+.open #burger{
+    opacity: 0;
+}

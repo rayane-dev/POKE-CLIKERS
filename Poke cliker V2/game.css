@@ -1,0 +1,1668 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*body{
+    height: 0vh;
+    background-image: url('./image/paysage1.jpeg');
+    width: 100%;
+	height: 402px;
+    padding-top: 110px;
+    background: url("https://github.com/ZeChrales/PogoAssets/blob/master/static_assets/png/Parkscene_Background.png?raw=true") center top, url("https://github.com/ZeChrales/PogoAssets/blob/master/static_assets/png/SkyDay.png?raw=true") center top / cover;
+	text-align: center;
+	user-select: none;
+    background-repeat: repeat;
+    background-size: 70%; 
+}*/
+
+
+
+body{
+    background-image: url('./image/theme1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+#title-game{
+    height: 70px;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+
+#salameche{
+    height: 350px;
+    position: relative;
+    top: 300px;
+    left: 360px;
+}
+
+#dracolosse{
+    height: 350px;
+    position: relative;
+    top: 100px;
+    left: 360px;
+    opacity: 0%;
+}
+
+#mewtwo{
+    height: 350px;
+    position: relative;
+    top: 100px;
+    left: 360px;
+    opacity: 0%;
+    animation: float 2.5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+#container-baie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 73%;
+    top: -100px;
+    height: 300px;
+    width: 300px;
+    background-color: rgba(216, 216, 216, 0.571);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#clickButton{
+    cursor: pointer;
+}
+
+#container-score{
+    display: flex;
+    position: relative;
+    left: 70%;
+    top: 220px;
+    font-size: 30px;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 600;
+    width: 370px;
+    justify-content: center;
+    text-align: center;
+}
+
+/*NAV*/
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 1.5rem;
+    height: 40%;
+    width: 5%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 30%;
+    margin-left: 10px;
+}
+
+nav img{
+    height: 80px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+/*FENETRE MODAL*/
+
+#modal-container-amelioration{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 490px;
+    background-color: rgba(61, 64, 157, .75);
+    transform-origin: center;
+    padding: 20px 40px;
+    padding-bottom: 50px;
+    border-radius: .7rem;
+    display: none;
+}
+
+/*FENETRE MODAL AMELIORATION*/
+#modal-container-amelioration.active{
+    display: block;
+}
+
+#modal-container-amelioration #header-modal-amelioration{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#modal-container-amelioration  .notifications{
+    display: flex;
+    width: 100%;
+    background-color: rgba(56, 106, 187,.7);
+    margin-bottom: 20px;
+    border-radius: .5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#modal-container-amelioration  .notifications .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    margin-left: 20px;
+}
+
+#modal-container-amelioration  .notifications .right img{
+    height: 30px;
+}
+
+#modal-container-amelioration  .notifications .right .bonus{
+    display: flex;
+    align-items: center;
+    color: rgb(150, 37, 37);
+    font-weight: bold;
+}
+
+
+
+
+/*FENETRE MODAL SUCCES*/
+#modal-container-succes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 430px;
+    background-color: rgba(61, 64, 157, .75);
+    transform-origin: center;
+    padding: 20px 40px;
+    padding-bottom: 10px;
+    border-radius: .7rem;
+    display: none;
+}
+
+#modal-container-succes #header-modal-succes{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#modal-container-succes #header-modal-succes .title-modal{
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+
+#modal-container-succes.active{
+    display: block;
+    height: 77%;
+    overflow-y: scroll;
+}
+
+#modal-container-succes  .notifications{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(56, 106, 187,.7);
+    margin-bottom: 30px;
+    border-radius: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+
+#modal-container-succes  .notifications-locked1{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(209, 209, 209, 0.7);
+    margin-bottom: 30px;
+    border-radius: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+
+#modal-container-succes  .notifications-locked2{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(209, 209, 209, 0.7);
+    margin-bottom: 30px;
+    border-radius: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+
+#modal-container-succes  .notifications-locked3{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(209, 209, 209, 0.7);
+    margin-bottom: 30px;
+    border-radius: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+
+#modal-container-succes  .notifications-locked4{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(209, 209, 209, 0.7);
+    margin-bottom: 30px;
+    border-radius: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+
+#modal-container-succes  .notifications-unlocked{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgba(56, 106, 187,.7);
+    margin-bottom: 30px;
+    border-radius: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+}
+
+
+.success-img-locked1{
+    filter: grayscale(100%);
+}
+
+.success-img-locked2{
+    filter: grayscale(100%);
+}
+
+.success-img-locked3{
+    filter: grayscale(100%);
+}
+
+.success-img-locked4{
+    filter: grayscale(100%);
+}
+
+.success-img-unlocked{
+    filter: grayscale(0%);
+}
+
+#modal-container-succes  .notifications .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+#modal-container-succes  .notifications .right img{
+    height: 60px;
+}
+
+#modal-container-succes  .notifications .right .bonus{
+    display: flex;
+    align-items: center;
+    color: red;
+}
+
+
+
+/*FENETRE MODAL PARAMETRE*/
+#modal-container-parametre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 500px;
+    background-color: rgba(61, 64, 157, .75);
+    transform-origin: center;
+    padding: 20px 40px;
+    padding-bottom: 50px;
+    border-radius: .7rem;
+    display: none;
+}
+
+#modal-container-parametre.active{
+    display: block;
+}
+
+#modal-container-parametre #header-modal-parametre{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#modal-container-parametre #header-modal-parametre .title-modal{
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+
+#modal-container-parametre .contain{
+    display: flex;
+    margin-top: 20px;
+    height: 90%;
+    width: 100%;
+}
+
+#modal-container-parametre .left{
+    width: 45%;
+    height: 100%;
+    margin-right: 30px;
+}
+
+#modal-container-parametre .left #theme, 
+#pokemon{
+    display: flex;
+    width: 100%;
+    border: 1px solid white;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    height: 45%;
+}
+
+#modal-container-parametre .left #theme h3{
+    margin-left: 15px;
+}
+
+#modal-container-parametre .left #theme div img{
+    height: 40px;
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+#modal-container-parametre .left #theme div button{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: #1C355F;
+    padding: 10px 30px;
+    border-radius: 7px;
+    color: #fff;
+    margin: auto;
+}
+
+#modal-container-parametre .left #pokemon{
+    height: 50%;
+    margin-top: 20px;
+    padding: 10px;
+    display: block;
+}
+
+#modal-container-parametre .left #theme{
+    height: 44.5%;
+    display: block;
+}
+
+#modal-container-parametre .left #theme h3{
+    margin-left: 15px;
+    text-align: center;
+}
+
+
+
+#modal-container-parametre .left #pokemon h3{
+    margin-left: 15px;
+    text-align: center;
+}
+
+#modal-container-parametre .left #pokemon div img{
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+#modal-container-parametre .left #pokemon div button{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    background-color: #1C355F;
+    padding: 10px 30px;
+    border-radius: 7px;
+    color: #fff;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#modal-container-parametre .right{
+    width: 45%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#modal-container-parametre .right h3{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#modal-container-parametre .right p{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(56, 106, 187,.7);
+    border-radius: .5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+}
+
+#upgrade{
+    display: flex;
+    width: 100%;
+    background-color: rgba(56, 106, 187,.7);
+    margin-top: 20px;
+    border-radius: .5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#upgrade-name1{
+    color: #fff;
+    font-weight: bold;
+}
+
+#upgrade-name2{
+    color: #fff;
+    font-weight: bold;
+}
+
+#upgrade-name3{
+    color: #fff;
+    font-weight: bold;
+}
+
+#upgrade-desc{
+    color: #fff;
+}
+
+#bonus{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-croix1{
+    position: absolute;
+    height: 10px;
+    top: 20px;
+    right: 20px; 
+    cursor: pointer;
+}
+.btn-croix2{
+    position: absolute;
+    height: 10px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.btn-croix3{
+    position: absolute;
+    height: 10px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.title-modal{
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+#pps{
+    font-size: 30px;
+    color: #FFCC03;
+    -webkit-text-stroke: 1px #386ABB;
+}
+
+#balance{
+    font-size: 50px;
+    color: #FFCC03;
+    -webkit-text-stroke: 2px #386ABB;
+}
+
+#pps-ctn{
+    font-size: 30px;
+    color: #FFCC03;
+    -webkit-text-stroke: 1px #386ABB;
+}
+
+#balance-ctn{
+    font-size: 50px;
+    color: #FFCC03;
+    -webkit-text-stroke: 2px #386ABB;
+}
+
+.upgrade-cost-unlocked{
+    color: red;
+}
+
+.upgrade-cost-unlocked{
+    color: #fff;
+}
+
+.theme-ctn{
+    margin-top: 10px;
+    font-weight: 400;
+    height: 120px;
+    overflow-y: scroll;
+}
+
+.theme-active{
+    display: flex;
+    margin-top: 10px;
+    background-color: rgba(56, 106, 187,.7);
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 13px;
+}
+
+.theme-inactive{
+    display: flex;
+    margin-top: 10px;
+    background-color: rgba(209, 209, 209, 0.7);
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 13px;
+}
+
+.theme-img{
+    height: 10px
+}
+
+.baies-ctn{
+    margin-top: 15px;
+    font-weight: 400;
+    height: 120px;
+    overflow-y: scroll;
+}
+
+.baie-active{
+    display: flex;
+    margin-top: 10px;
+    background-color: rgba(56, 106, 187,.7);
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 13px;
+}
+
+.baie-inactive{
+    display: flex;
+    margin-top: 10px;
+    background-color: rgba(209, 209, 209, 0.7);
+    border-radius: 5px;
+    text-align: left;
+    padding-left: 13px;
+}
+
+.baie-img{
+    height: 10px
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+    visibility: hidden;
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: rgb(226, 226, 226);
+}
+
+.success-name{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#upgrade-desc{
+    font-size: 18px;
+}
+
+#upgrade-name1{
+    font-size: 20px;
+}
+
+#upgrade-name2{
+    font-size: 20px;
+}
+
+#upgrade-name3{
+    font-size: 20px;
+}
+
+#upgrade-cost1{
+    font-weight: bold;
+}
+
+#upgrade-cost2{
+    font-weight: bold;
+}
+
+#upgrade-cost3{
+    font-weight: bold;
+}
+
+#notification-ctn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.first-upgrade-notification{
+    display: flex;
+    background-color: rgba(56, 106, 187,.7);
+    height: 100px;
+    border-radius: 10px;
+    border: solid 3px rgba(216, 216, 216, 0.571);
+    margin-bottom: 10px;
+}
+
+.upgrade-notification{
+    display: flex;
+    background-color: rgba(0, 128, 0, 0.837);
+    height: 100px;
+    border-radius: 10px;
+    border: solid 3px rgba(216, 216, 216, 0.571);
+    margin-bottom: 10px;
+}
+
+.notification-image{
+    height: 90%;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.notification-text-ctn{
+    width: 68%;
+    margin-top: 10px;
+}
+
+.notification-text{
+    color: #fff;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+
+.btn-croix-notification{
+    position: absolute;
+    top: 20px;
+    right: 20px; 
+    cursor: pointer;
+}
+
+.success-notification{
+    display: flex;
+    background-color: rgba(56, 106, 187,.7);
+    height: 100px;
+    border-radius: 10px;
+    border: solid 3px rgba(216, 216, 216, 0.571);
+    margin-bottom: 10px;
+}
+
+.fail-notification{
+    display: flex;
+    background-color: rgba(159, 4, 4, 0.837);
+    height: 100px;
+    border-radius: 10px;
+    border: solid 3px rgba(216, 216, 216, 0.571);
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 720px) and (max-width:720px){
+    body{
+         overflow-y: hidden;
+         overflow-x: hidden;
+    } 
+    body .container{
+         overflow-y: hidden;
+         overflow-x: hidden;
+    }
+    #title-game{
+     height:33px;
+     position: absolute;
+     margin-left: 20px;
+     margin-top: 20px;
+     }
+ 
+    #salameche{
+         height: 200px;
+         top: 100px;
+         left: 160px;
+    }
+ 
+    #dracolosse{
+         height: 150px;
+         top: 50px;
+         left: 400px;
+         visibility: hidden;
+    }
+ 
+     #mewtwo{
+         height: 50px;
+         top: -250px;
+         left: -130px;
+         visibility: hidden;
+    }
+ 
+     #container-baie{
+         position: relative;
+         left: 65%;
+         top: -70px;
+         height: 150px;
+         width: 150px;
+     }
+ 
+     #container-baie img{
+         height: 60%;
+     }
+ 
+     #container-score{
+         left: 50%;
+         top: 100px;
+         font-size: 30px;
+     }
+     #balance{
+         font-size: 40px;
+         color: #FFCC03;
+         -webkit-text-stroke: 2px #386ABB;
+     }
+     
+     #pps-ctn{
+         font-size: 25px;
+         color: #FFCC03;
+         -webkit-text-stroke: 1px #386ABB;
+     }
+     nav{
+         background-color: rgba(255, 255, 255, 0.75);
+         border-radius: .4rem;
+         height: 45%;
+         width: 5%;
+         padding-top: 10px;
+         padding-bottom: 30px;
+         position: absolute;
+         top: 25%;
+         margin-left: 20px;
+     }
+     
+     nav img{
+         height: 45px;
+         margin-top: 3px;
+     }
+     /*FENETRE MODAL*/
+     .btn-croix1{
+         position: absolute;
+         height: 5px;
+         top: 20px;
+         right: 20px;  
+     }
+     .btn-croix2{
+         position: absolute;
+         height: 5px;
+         top: 20px;
+         right: 20px;  
+     }
+     .btn-croix3{
+         position: absolute;
+         height: 2px;
+         top: 20px;
+         right: 20px;  
+     }
+ 
+     .btn-croix1 img{
+         height: 20px;
+     }
+     .btn-croix2 img{
+         height: 20px; 
+     }
+     .btn-croix3 img{
+         height: 20px;    
+     }
+     
+     .title-modal{
+         height: 30px;
+         margin-bottom: 10px;
+     }
+ 
+     /*AMELIORATION*/
+     #modal-container-amelioration{
+         top: 10%;
+         left: 8%;
+         width: 400px;
+         height: 240px;
+         padding: 10px 20px;
+         padding-bottom: 50px;
+         border-radius: .3rem;
+         transform: translateY(100px);
+     }
+      
+    #modal-container-amelioration  .notifications{
+        margin-bottom: 10px;
+        border-radius: .5rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+ 
+    #modal-container-amelioration  .notifications .left img{
+        height: 40px;
+    }
+      
+    #modal-container-amelioration  .notifications .right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        margin-left: 20px;
+        font-size: 10px;
+    }
+      
+    #modal-container-amelioration  .notifications .right img{
+        height: 7px;
+    }
+      
+     #modal-container-amelioration  .notifications .right .bonus{
+        display: flex;
+        align-items: center;
+        color: red;
+        font-size: 9px;
+    }
+
+    #upgrade-name1, #upgrade-name2, #upgrade-name3{
+        font-size: 13px;
+    }
+
+    #upgrade-desc{
+        font-size: 13px;
+    }
+      
+ 
+ 
+ 
+     /*SUCCES*/
+     #modal-container-succes{
+         top: 60%;
+         left: 37%;
+         width: 400px;
+         height: 240px;
+         padding: 10px 20px;
+         padding-bottom: 50px;
+         border-radius: .3rem;
+     }
+ 
+     #modal-container-succes #header-modal-succes .title-modal{
+         height: 30px;
+         margin-top: 10px;
+         margin-bottom: 30px;
+     }
+     
+     
+     
+     
+     #modal-container-succes  .notifications{
+         padding: 10px;
+         font-size: 10px;
+         margin-bottom: 20px;
+         border-radius: .3rem;
+     }
+     
+     #modal-container-succes  .notifications-locked1{
+         display: flex;
+         justify-content: space-between;
+         padding: 10px;
+         align-items: center;
+         font-size: 10px;
+         width: 100%;
+         background-color: rgba(209, 209, 209, 0.7);
+         margin-bottom: 10px;
+         border-radius: .3rem;
+         padding-left: 20px;
+         padding-right: 20px;
+         color: #fff;
+     }
+     
+     #modal-container-succes  .notifications-locked2{
+         display: flex;
+         justify-content: space-between;
+         padding: 10px;
+         align-items: center;
+         font-size: 10px;
+         width: 100%;
+         background-color: rgba(209, 209, 209, 0.7);
+         margin-bottom: 10px;
+         border-radius: .3rem;
+         padding-left: 20px;
+         padding-right: 20px;
+         color: #fff;
+     }
+     
+     #modal-container-succes  .notifications-locked3{
+         display: flex;
+         justify-content: space-between;
+         padding: 10px;
+         align-items: center;
+         font-size: 10px;
+         width: 100%;
+         background-color: rgba(209, 209, 209, 0.7);
+         margin-bottom: 10px;
+         border-radius: .3rem;
+         padding-left: 20px;
+         padding-right: 20px;
+         color: #fff;
+     }
+     
+     #modal-container-succes  .notifications-unlocked{
+         display: flex;
+         justify-content: space-between;
+         padding: 10px;
+         align-items: center;
+         height: 10px;
+         width: 100%;
+         background-color: rgba(56, 106, 187,.7);
+         margin-bottom: 30px;
+         border-radius: .3rem;
+         padding-left: 20px;
+         padding-right: 20px;
+         color: #fff;
+     }
+     
+     #modal-container-succes  .notifications .right img{
+         height: 30px;
+     }
+     
+     #modal-container-succes  .notifications .right .bonus{
+         display: flex;
+         align-items: center;
+         color: red;
+     }
+     #succes-name{
+         font-size: 13px;
+     }
+     .succes-name{
+         font-size: 13px;
+     }
+     .success-img-locked1{
+         height: 15px;
+     }
+     .success-img-locked2{
+         height: 15px;
+     }
+     .success-img-locked3{
+         height: 15px;
+     }
+
+
+    .success-name{
+        font-size: 13px;
+    }
+
+    #success-desc4{
+        font-size: 13px;
+    }
+ 
+     /*PARAMETRE*/
+     #modal-container-parametre{
+         top: 60%;
+         left: 37%;
+         width: 400px;
+         height: 300px;
+         padding: 10px 20px;
+         padding-bottom: 50px;
+         border-radius: .3rem;
+     }
+     
+     #modal-container-parametre #header-modal-parametre .title-modal{
+         height: 20px;
+         margin-bottom: 10px;
+     }
+     #modal-container-parametre .contain{
+         display: flex;
+         margin-top: 20px;
+         height: 90%;
+         width: 100%;
+     }
+     
+     #modal-container-parametre .left{
+         width: 45%;
+         height: 100%;
+         margin-right: 30px;
+     }
+     
+     #modal-container-parametre .left #theme, 
+     #pokemon{
+         display: flex;
+         width: 100%;
+         border: 1px solid white;
+         padding: 10px;
+         color: #fff;
+         border-radius: 10px;
+         height: 45%;
+         overflow: hidden;
+     }
+     
+     #modal-container-parametre .left #theme h3{
+         margin-left: 10px;
+         font-size: 13px;
+     }
+     
+     #modal-container-parametre .left #theme div img{
+         height: 25px;
+         margin-left: 5px;
+         margin-top: 2px;
+     }
+     
+     #modal-container-parametre .left #theme div button{
+         display: flex;
+         align-items: center;
+         height: 20px;
+         background-color: #1C355F;
+         padding: 10px 30px;
+         border-radius: 3px;
+         color: #fff;
+         margin: auto;
+     }
+     
+     #modal-container-parametre .left #pokemon{
+         height: 50%;
+         margin-top: 20px;
+         padding: 10px;
+         display: block;
+     }
+     
+     #modal-container-parametre .left #theme{
+         height: 44.5%;
+         display: block;
+     }
+     
+     #modal-container-parametre .left #theme h3{
+         margin-left: 13px;
+         font-size: 13px;
+         text-align: center;
+     }
+     
+     
+     
+     #modal-container-parametre .left #pokemon h3{
+         margin-left: 14px;
+         font-size: 13px;
+         text-align: center;
+     }
+     
+     #modal-container-parametre .left #pokemon div img{
+         height: 20px;
+         margin-left: 10px;
+         margin-top: 2px;
+     }
+     
+     #modal-container-parametre .left #pokemon div button{
+         display: flex;
+         align-items: center;
+         height: 20px;
+         background-color: #1C355F;
+         padding: 10px 30px;
+         border-radius: 7px;
+         color: #fff;
+         margin: auto;
+         margin-top: 10px;
+     }
+     
+     #modal-container-parametre .right{
+         width: 45%;
+         height: 100%;
+         border: 1px solid white;
+         border-radius: 10px;
+         color: #fff;
+         overflow: scroll ;
+     }
+ 
+     #modal-container-parametre .right div{
+         overflow: scroll ;
+     }
+     
+     #modal-container-parametre .right h3{
+         margin-top: 20px;
+         margin-left: 20px;
+     }
+     
+     #modal-container-parametre .right p{
+         margin-top: 20px;
+         margin-left: 20px;
+     }
+ 
+     .theme-ctn{
+         overflow-y: scroll;
+     }
+
+     #success-desc4 {
+        font-size: 13px;
+    }
+ }
+ 
+ 
+ @media screen and (min-width: 576px) and (max-width: 576px) {
+     body{
+         height: 130vh;
+         width: 130vw;
+         background-size: none;
+     }
+     .container{
+         height: 130vh;
+         width: 100vw;
+     }
+     #title-game{
+         height: 25px;
+         position: absolute;
+         margin-left: 15px;
+         margin-top: 15px;
+     }
+     
+     #salameche{
+         height: 200px;
+         top: 200px;
+         left: 160px;
+     }
+ 
+     #dracolosse{
+         height: 150px;
+         top: 50px;
+         left: 400px;
+         visibility: hidden;
+     }
+ 
+     #mewtwo{
+         height: 50px;
+         top: -180px;
+         left: -130px;
+         visibility: hidden;
+     }
+     
+     #container-baie{
+         position: absolute;
+         left: 80%;
+         top: 250px;
+         height: 150px;
+         width: 150px;
+     }
+ 
+     #container-baie img{
+         height: 60%;
+     }
+     #container-score{
+         left: 65%;
+         top: 100px;
+         font-size: 30px;
+     }
+     #balance{
+         font-size: 30px;
+         color: #FFCC03;
+         -webkit-text-stroke: 1px #386ABB;
+     }
+ 
+     #balance-ctn{
+         font-size: 30px;
+     }
+     
+     #pps-ctn{
+         font-size: 20px;
+         color: #FFCC03;
+         -webkit-text-stroke: 1px #386ABB;
+     }
+     nav{
+         background-color: rgba(255, 255, 255, 0.75);
+         border-radius: .4rem;
+         height: 60%;
+         width: 7%;
+         padding-top: 10px;
+         padding-bottom: 30px;
+         position: absolute;
+         top: 45%;
+         margin-left: 20px;
+     }
+     
+     nav img{
+         height: 45px;
+         margin-top: 3px;
+     }
+ 
+     /*FENETRE MODAL*/
+     .btn-croix1{
+         position: absolute;
+         height: 5px;
+         top: 20px;
+         right: 20px;  
+     }
+     .btn-croix2{
+         position: absolute;
+         height: 5px;
+         top: 20px;
+         right: 20px;  
+     }
+     .btn-croix3{
+         position: absolute;
+         height: 2px;
+         top: 20px;
+         right: 20px;  
+     }
+ 
+     .btn-croix1 img{
+         height: 20px;
+     }
+     .btn-croix2 img{
+         height: 20px; 
+     }
+     .btn-croix3 img{
+         height: 20px;    
+     }
+     
+     .title-modal{
+         height: 30px;
+         margin-bottom: 10px;
+     }
+ 
+     /*AMELIORATION*/
+     #modal-container-amelioration{
+         top: 10%;
+         left: 15%;
+         width: 300px;
+         height: 275px;
+         padding: 10px 20px;
+         padding-bottom: 50px;
+         border-radius: .3rem;
+         transform: translateY(100px);
+     }
+      
+     #modal-container-amelioration  .notifications{
+         margin-bottom: 10px;
+         border-radius: .5rem;
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+ 
+     #modal-container-amelioration  .notifications .left img{
+         height: 40px;
+    }
+      
+     #modal-container-amelioration  .notifications .right{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: #fff;
+          margin-left: 20px;
+         font-size: 10px;
+     }
+      
+     #modal-container-amelioration  .notifications .right img{
+         height: 7px;
+     }
+      
+     #modal-container-amelioration  .notifications .right .bonus{
+         display: flex;
+         align-items: center;
+         color: red;
+         font-size: 9px;
+     }
+
+    #upgrade-desc{
+        font-size: 13px;
+    }
+ 
+
+    
+     /*SUCCES*/
+     #modal-container-succes{
+         top: 60%;
+         left: 41%;
+         width: 300px;
+         height: 230px;
+         padding: 10px 20px;
+         padding-bottom: 50px;
+         border-radius: .3rem;
+     }
+ 
+     #modal-container-succes #header-modal-succes .title-modal{
+         height: 30px;
+         margin-top: 10px;
+         margin-bottom: 5px;
+     }
+     
+     
+     
+     
+     #modal-container-succes  .notifications{
+         padding: 10px;
+         font-size: 10px;
+         margin-bottom: 20px;
+         border-radius: .3rem;
+     }
+     
+     #modal-container-succes  .notifications-locked1{
+         display: flex;
+         justify-content: space-between;
+         padding: 10px;
+         align-items: center;
+         font-size: 10px;
+         width: 100%;
+         background-color: rgba(209, 209, 209, 0.7);
+         margin-bottom: 10px;
+         border-radius: .3rem;
+         padding-left: 20px;
+         padding-right: 20px;
+         color: #fff;
+     }
+     
+     #modal-container-succes  .notifications-locked2{
+         display: flex;
+         justify-content: space-between;
+         padding: 10px;
+         align-items: center;
+         font-size: 10px;
+         width: 100%;
+         background-color: rgba(209, 209, 209, 0.7);
+         margin-bottom: 10px;
+         border-radius: .3rem;
+         padding-left: 20px;
+         padding-right: 20px;
+         color: #fff;
+     }
+     
+     #modal-container-succes  .notifications-locked3{
+         display: flex;
+         justify-content: space-between;
+         padding: 10px;
+         align-items: center;
+         font-size: 10px;
+         width: 100%;
+         background-color: rgba(209, 209, 209, 0.7);
+         margin-bottom: 10px;
+         border-radius: .3rem;
+         padding-left: 20px;
+         padding-right: 20px;
+         color: #fff;
+     }
+     
+     #modal-container-succes  .notifications-unlocked{
+         display: flex;
+         justify-content: space-between;
+         padding: 10px;
+         align-items: center;
+         height: 10px;
+         width: 100%;
+         background-color: rgba(56, 106, 187,.7);
+         margin-bottom: 30px;
+         border-radius: .3rem;
+         padding-left: 20px;
+         padding-right: 20px;
+         color: #fff;
+     }
+     
+     #modal-container-succes  .notifications .right img{
+         height: 30px;
+     }
+     
+     #modal-container-succes  .notifications .right .bonus{
+         display: flex;
+         align-items: center;
+         color: red;
+     }
+     #succes-name{
+         font-size: 13px;
+     }
+     .succes-name{
+         font-size: 13px;
+     }
+     .success-img-locked1{
+         height: 15px;
+     }
+     .success-img-locked2{
+         height: 15px;
+     }
+     .success-img-locked3{
+         height: 15px;
+     }
+ 
+     /*PARAMETRE*/
+     #modal-container-parametre{
+         top: 60%;
+         left: 45%;
+         width: 350px;
+         height: 260px;
+         padding: 10px 20px;
+         padding-bottom: 50px;
+         border-radius: .3rem;
+     }
+     
+     #modal-container-parametre #header-modal-parametre .title-modal{
+         height: 20px;
+         margin-bottom: 0px;
+     }
+     #modal-container-parametre .contain{
+         display: flex;
+         margin-top: 20px;
+         height: 90%;
+         width: 100%;
+     }
+     
+     #modal-container-parametre .left{
+         width: 45%;
+         height: 100%;
+         margin-right: 30px;
+     }
+     
+     #modal-container-parametre .left #theme, 
+     #pokemon{
+         display: flex;
+         width: 100%;
+         border: 1px solid white;
+         padding: 10px;
+         color: #fff;
+         border-radius: 5px;
+         height: 45%;
+         overflow: hidden;
+     }
+     
+     #modal-container-parametre .left #theme h3{
+         margin-left: 10px;
+         font-size: 13px;
+     }
+     
+     #modal-container-parametre .left #theme div img{
+         height: 25px;
+         margin-left: 5px;
+         margin-top: 2px;
+     }
+     
+     #modal-container-parametre .left #theme div button{
+         display: flex;
+         align-items: center;
+         height: 20px;
+         background-color: #1C355F;
+         padding: 10px 30px;
+         border-radius: 3px;
+         color: #fff;
+         margin: auto;
+     }
+     
+     #modal-container-parametre .left #pokemon{
+         height: 50%;
+         margin-top: 20px;
+         padding: 10px;
+         display: block;
+     }
+     
+     #modal-container-parametre .left #theme{
+         height: 44.5%;
+         display: block;
+     }
+     
+     #modal-container-parametre .left #theme h3{
+         margin-left: 13px;
+         font-size: 13px;
+         text-align: center;
+     }
+     
+     
+     
+     #modal-container-parametre .left #pokemon h3{
+         margin-left: 14px;
+         font-size: 13px;
+         text-align: center;
+     }
+     
+     #modal-container-parametre .left #pokemon div img{
+         height: 20px;
+         margin-left: 10px;
+         margin-top: 2px;
+     }
+     
+     #modal-container-parametre .left #pokemon div button{
+         display: flex;
+         align-items: center;
+         height: 20px;
+         background-color: #1C355F;
+         padding: 10px 30px;
+         border-radius: 7px;
+         color: #fff;
+         margin: auto;
+         margin-top: 10px;
+     }
+     
+     #modal-container-parametre .right{
+         width: 45%;
+         height: 100%;
+         border: 1px solid white;
+         border-radius: 5px;
+         color: #fff;
+         overflow: scroll ;
+     }
+ 
+     #modal-container-parametre .right div{
+         overflow: scroll ;
+     }
+     
+     #modal-container-parametre .right h3{
+         margin-top: 20px;
+         margin-left: 20px;
+     }
+     
+     #modal-container-parametre .right p{
+         margin-top: 20px;
+         margin-left: 20px;
+     }
+ 
+     .theme-ctn{
+         overflow-y: scroll;
+     }
+    #upgrade-name1{
+        font-size: 13px;
+    }
+    #upgrade-name2{
+        font-size: 13px;
+    }
+    #upgrade-name3{
+        font-size: 13px;
+    }
+    #upgrade-name4{
+        font-size: 13px;
+    }
+    .success-img-locked4{
+        height: 13px;
+    }
+ 
+ }
+ 
